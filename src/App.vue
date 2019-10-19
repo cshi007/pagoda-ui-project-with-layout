@@ -63,30 +63,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" type="text/scss">
-  .pagoda-layout{
-    & > .el-header {
-      .logo-text {
-        margin-left: 12px;
-        font-size: 16px;
-        vertical-align: middle;
-      }
-      .user-info {
-        cursor: pointer;
-      }
-      .user-name {
-        margin-left: 10px;
-        font-size: 12px;
-        color: #D9DEE4;
-        vertical-align: middle;
-      }
-      .user-head, .logo {
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        vertical-align: middle;
-      }
-    }
-  }
-</style>

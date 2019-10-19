@@ -6,7 +6,7 @@ Vue.use(Router)
 const routes = [
   {
     path: '/',
-    component: () => import('../views/home')
+    component: () => import('../views/index')
   },
   {
     path: '/main',

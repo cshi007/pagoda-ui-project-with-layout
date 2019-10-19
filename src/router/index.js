@@ -1,29 +1,35 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Router from 'vue-router'
 
-Vue.use(VueRouter)
+Vue.use(Router)
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: Home
+    component: () => import('../views/home')
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/main',
+    component: () => import('../views/main')
+  },
+  {
+    path: '/main/detail1',
+    component: () => import('../views/detail1')
+  },
+  {
+    path: '/detail2',
+    component: () => import('../views/detail2'),
+    meta: {
+      // 标志当前路由跳转需要打开新的标签页
+      tabConfig: {
+        tabName (to, from) {
+          return `查看详情-${to.query.index}`
+        }
+      }
+    }
   }
 ]
 
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
+export default new Router({
   routes
 })
-
-export default router

@@ -1,4 +1,3 @@
-
 <template>
   <pagoda-detail-layout-v1 content-title="这里是页面标题" @back="handleBack">
     <template slot="content-btn">
@@ -12,48 +11,48 @@
       <el-form class="el-form-reset pagoda-form-grid pagoda-form-grid--inline">
         <el-form-item label="输入框" class="pagoda-form-grid-cell">
           <el-input v-model="form.value1" v-show="editable"></el-input>
-          <p v-show="!editable">{{form.value1}}</p>
+          <p v-show="!editable">{{ form.value1 }}</p>
         </el-form-item>
         <el-form-item label="整数" class="pagoda-form-grid-cell">
           <el-input v-model="form.value2" v-show="editable"></el-input>
-          <p v-show="!editable">{{form.value2}}</p>
+          <p v-show="!editable">{{ form.value2 }}</p>
         </el-form-item>
         <el-form-item label="数字" class="pagoda-form-grid-cell">
           <el-input v-model="form.value3" v-show="editable"></el-input>
-          <p v-show="!editable">{{form.value3}}</p>
+          <p v-show="!editable">{{ form.value3 }}</p>
         </el-form-item>
         <el-form-item label="邮箱" class="pagoda-form-grid-cell">
           <el-input v-model="form.value4" v-show="editable"></el-input>
-          <p v-show="!editable">{{form.value4}}</p>
+          <p v-show="!editable">{{ form.value4 }}</p>
         </el-form-item>
         <el-form-item label="手机号码" class="pagoda-form-grid-cell">
           <el-input v-model="form.value5" v-show="editable"></el-input>
-          <p v-show="!editable">{{form.value5}}</p>
+          <p v-show="!editable">{{ form.value5 }}</p>
         </el-form-item>
         <el-form-item label="电话" class="pagoda-form-grid-cell">
           <el-input v-model="form.value6" v-show="editable"></el-input>
-          <p v-show="!editable">{{form.value6}}</p>
+          <p v-show="!editable">{{ form.value6 }}</p>
         </el-form-item>
         <el-form-item label="网址" class="pagoda-form-grid-cell">
           <el-input v-model="form.value7" v-show="editable"></el-input>
-          <p v-show="!editable">{{form.value7}}</p>
+          <p v-show="!editable">{{ form.value7 }}</p>
         </el-form-item>
         <el-form-item label="标签" class="pagoda-form-grid-cell">
           <el-input v-model="form.value8" v-show="editable"></el-input>
-          <p v-show="!editable">{{form.value8}}</p>
+          <p v-show="!editable">{{ form.value8 }}</p>
         </el-form-item>
         <el-form-item label="评分" class="pagoda-form-grid-cell">
           <el-input v-model="form.value9" v-show="editable"></el-input>
-          <p v-show="!editable">{{form.value9}}</p>
+          <p v-show="!editable">{{ form.value9 }}</p>
         </el-form-item>
         <el-form-item label="金额" class="pagoda-form-grid-cell">
           <el-input v-model="form.value0" v-show="editable"></el-input>
-          <p v-show="!editable">{{form.value0}}</p>
+          <p v-show="!editable">{{ form.value0 }}</p>
         </el-form-item>
         <div class="el-form-reset-block">
           <el-form-item label="备注">
             <el-input type="textarea" v-model="form.value10" v-show="editable"></el-input>
-            <p v-show="!editable">{{form.value10}}</p>
+            <p v-show="!editable">{{ form.value10 }}</p>
           </el-form-item>
         </div>
       </el-form>
@@ -64,12 +63,7 @@
         <pagoda-form-table-layout class="detail-layout-v1-content__form-table-layout">
           <!-- 实现一屏展示时 一定要配置表格高度 -->
           <template slot="table" slot-scope="scope">
-            <pagoda-table-v2
-              :columns="columns"
-              :request="tableRequest"
-              :height="scope.height"
-            >
-            </pagoda-table-v2>
+            <pagoda-table-v2 :columns="columns" :request="tableRequest" :height="scope.height"> </pagoda-table-v2>
           </template>
         </pagoda-form-table-layout>
       </div>
@@ -95,20 +89,25 @@ export default {
         value0: '100元',
         value10: '备注信息'
       },
-      columns: [{
-        label: '日期',
-        prop: 'date'
-      }, {
-        label: '姓名',
-        prop: 'name'
-      }, {
-        label: '地址',
-        prop: 'address'
-      }, {
-        label: '操作',
-        width: 240,
-        slot: 'edit-column'
-      }],
+      columns: [
+        {
+          label: '日期',
+          prop: 'date'
+        },
+        {
+          label: '姓名',
+          prop: 'name'
+        },
+        {
+          label: '地址',
+          prop: 'address'
+        },
+        {
+          label: '操作',
+          width: 240,
+          slot: 'edit-column'
+        }
+      ],
       editForm: {}
     }
   },

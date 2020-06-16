@@ -1,4 +1,3 @@
-
 <template>
   <pagoda-left-right-layout title="左右详情页布局" sub-title="基本信息">
     <template slot="operation">
@@ -46,47 +45,47 @@
       <el-form inline label-position="left" class="el-form-reset">
         <el-form-item label="状态">
           <el-input v-model="form.value1" v-show="editable"></el-input>
-          <p v-show="!editable">{{form.value1}}</p>
+          <p v-show="!editable">{{ form.value1 }}</p>
         </el-form-item>
         <el-form-item label="发现版本">
           <el-input v-model="form.value2" v-show="editable"></el-input>
-          <p v-show="!editable">{{form.value2}}</p>
+          <p v-show="!editable">{{ form.value2 }}</p>
         </el-form-item>
         <el-form-item label="模块">
           <el-input v-model="form.value3" v-show="editable"></el-input>
-          <p v-show="!editable">{{form.value3}}</p>
+          <p v-show="!editable">{{ form.value3 }}</p>
         </el-form-item>
         <el-form-item label="优先级">
           <el-input v-model="form.value4" v-show="editable"></el-input>
-          <p v-show="!editable">{{form.value4}}</p>
+          <p v-show="!editable">{{ form.value4 }}</p>
         </el-form-item>
         <el-form-item label="严重程度">
           <el-input v-model="form.value5" v-show="editable"></el-input>
-          <p v-show="!editable">{{form.value5}}</p>
+          <p v-show="!editable">{{ form.value5 }}</p>
         </el-form-item>
         <el-form-item label="处理人">
           <el-input v-model="form.value6" v-show="editable"></el-input>
-          <p v-show="!editable">{{form.value6}}</p>
+          <p v-show="!editable">{{ form.value6 }}</p>
         </el-form-item>
         <el-form-item label="创建人">
           <el-input v-model="form.value7" v-show="editable"></el-input>
-          <p v-show="!editable">{{form.value7}}</p>
+          <p v-show="!editable">{{ form.value7 }}</p>
         </el-form-item>
         <el-form-item label="创建时间">
           <el-input v-model="form.value8" v-show="editable"></el-input>
-          <p v-show="!editable">{{form.value8}}</p>
+          <p v-show="!editable">{{ form.value8 }}</p>
         </el-form-item>
         <el-form-item label="修复人">
           <el-input v-model="form.value9" v-show="editable"></el-input>
-          <p v-show="!editable">{{form.value9}}</p>
+          <p v-show="!editable">{{ form.value9 }}</p>
         </el-form-item>
         <el-form-item label="修复状态">
           <el-input v-model="form.value0" v-show="editable"></el-input>
-          <p v-show="!editable">{{form.value0}}</p>
+          <p v-show="!editable">{{ form.value0 }}</p>
         </el-form-item>
         <el-form-item label="进程">
           <el-input v-model="form.value11" v-show="editable"></el-input>
-          <p v-show="!editable">{{form.value11}}</p>
+          <p v-show="!editable">{{ form.value11 }}</p>
         </el-form-item>
       </el-form>
     </template>

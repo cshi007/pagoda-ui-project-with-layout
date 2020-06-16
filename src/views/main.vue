@@ -40,11 +40,7 @@
     </template>
     <!-- 实现一屏展示时 一定要配置表格高度 -->
     <template slot="table" slot-scope="scope">
-      <pagoda-table-v2
-        :columns="columns"
-        :request="tableRequest"
-        :height="scope.height"
-      >
+      <pagoda-table-v2 :columns="columns" :request="tableRequest" :height="scope.height">
         <template slot="edit-column" slot-scope="scope">
           <div class="pagoda-button-group">
             <el-button type="text" @click="handleDetail1">当前标签查看详情</el-button>
@@ -60,20 +56,25 @@
 export default {
   data () {
     return {
-      columns: [{
-        label: '日期',
-        prop: 'date'
-      }, {
-        label: '姓名',
-        prop: 'name'
-      }, {
-        label: '地址',
-        prop: 'address'
-      }, {
-        label: '操作',
-        width: 240,
-        slot: 'edit-column'
-      }]
+      columns: [
+        {
+          label: '日期',
+          prop: 'date'
+        },
+        {
+          label: '姓名',
+          prop: 'name'
+        },
+        {
+          label: '地址',
+          prop: 'address'
+        },
+        {
+          label: '操作',
+          width: 240,
+          slot: 'edit-column'
+        }
+      ]
     }
   },
   methods: {

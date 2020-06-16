@@ -9,9 +9,7 @@ import 'pagoda-ui/src/theme/ui-reset.scss'
 import './registerServiceWorker'
 
 // 注意：需要在use element-ui 之前 use pagoda-ui
-Vue
-  .use(PagodaUi)
-  .use(ElementUi, { size: 'mini' })
+Vue.use(PagodaUi).use(ElementUi, { size: 'mini' })
 
 Vue.config.productionTip = false
 
